@@ -1,0 +1,82 @@
+/* 画面幅768px以下のとき */
+@media screen and (max-width: 768px){
+  h2{
+    font-size: 30px;
+  }
+  p{
+    font-size: 25px;
+  }
+  #parent {
+    flex-direction: column; /* 縦並び */
+  }
+}
+#parent{
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+} 
+
+p, a {
+  font-size: 20px;
+}
+
+header {
+  margin-bottom: 20px; /* 下の余白 */
+  background-color: rgb(244, 79, 79);
+  text-align: center; /* 中の要素を中央揃え */
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+}
+
+main{
+  padding: 10px;
+}
+
+.contents{
+  border: 3px solid rgb(238, 204, 204);/*太3px 実践　　ピンク*/
+  flex-basis: 25%;/* 親要素の25%幅 */
+  padding: 10px 15px;/*内側余白　上下10px 左右15px*/
+  margin: 20px 0;
+  text-align: center;/* 中の要素が中央揃え */
+}
+
+/* contents内の二番目のp要素内のテキストの中で一番目の文字にのみスタイル設定 */
+.contents p:nth-of-type(2)::first-letter{
+  font-weight: bold;
+  color: rgb(97, 206, 249);
+}
+
+h2{
+  font-size: 25px;/* フォントサイズを25px */
+  border-bottom: 3px dotted rgb(236, 122, 122);/* 下線（太さ3px、点線、色 */
+}
+
+/* h2要素の前に「●」記号を表示 */
+h2::before{
+  content: "⚫︎";
+  color: rgb(239, 111, 139);
+}
+
+img{
+  margin: 10px 0;
+  width: 70%;
+}
+
+footer{
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+
+footer a{
+  color: rgb(255, 255, 255);
+}
+
+footer a:visited{
+  color: rgb(193, 234, 251);
+}
+
+footer a:hover{
+  color: rgb(245, 178, 168);
+}
